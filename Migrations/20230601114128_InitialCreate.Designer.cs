@@ -11,7 +11,7 @@ using projeto_gamer_manha.Infra;
 namespace projeto_gamer_manha.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20230530114525_InitialCreate")]
+    [Migration("20230601114128_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />

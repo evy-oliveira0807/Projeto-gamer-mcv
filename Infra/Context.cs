@@ -29,7 +29,7 @@ namespace projeto_gamer_manha.Infra
                 //user Id = "nome do seu usuario de login"
                 //pwd = "senha do seu usuario"
 
-                optionsBuilder.UseSqlServer("Data Source = DESKTOP-1DQ8V99\\ROQUE; Initial Catalog = gamerManha; Integrated Security=true; TrustServerCertificate = true");
+                optionsBuilder.UseSqlServer("Data Source = note05-s15; Initial Catalog = gamerManha; User Id = sa; Pwd = Senai@134; TrustServerCertificate = true");
             }
         }
 
