@@ -22,7 +22,7 @@ namespace projeto_gamer_manha.Controllers
         {
             //variável que armazena as equipes listadas do banco de dados
             ViewBag.Equipe = c.Equipe.ToList();
-            
+
             //retorna a view de equipe (TELA)
             return View();
         }
@@ -42,10 +42,10 @@ namespace projeto_gamer_manha.Controllers
             //início da lógica do upload da imagem
             if (form.Files.Count > 0)
             {
-                
+
                 var file = form.Files[0];
 
-                var folder = Path.Combine(Directory.GetCurrentDirectory(),"wwwroot/img/Equipes");
+                var folder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/Equipes");
 
                 if (!Directory.Exists(folder))
                 {
@@ -76,6 +76,20 @@ namespace projeto_gamer_manha.Controllers
             c.SaveChanges();
 
             //retorna para o local chamando a rota de listar(método Index)
+            return LocalRedirect("~/Equipe/Listar");
+        }
+
+        [Route("Excluir/{id}")]
+
+        public IActionResult Excluir(int id)
+        {
+            Equipe equipeBuscada = c.Equipe.FirstOrDefault(e => e.IdEquipe == id);
+
+            c.Remove(equipeBuscada);
+
+            c.SaveChanges();
+
+
             return LocalRedirect("~/Equipe/Listar");
         }
 

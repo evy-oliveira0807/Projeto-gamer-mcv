@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9zGt/xEr+rMqJ6S/8/SxdWAGwgd5qUXJLQeJasEIe+A=",
+  "Hash": "7V4b7pfH/nvW2CIGwUdsiySerA82KdRSSGY/y+Q8VRo=",
   "Source": "projeto-gamer-manha",
   "BasePath": "_content/projeto-gamer-manha",
   "Mode": "Default",
@@ -102,6 +102,40 @@
       "OriginalItemSpec": "wwwroot\\img\\Equipes\\agua santa.png"
     },
     {
+      "Identity": "C:\\Users\\53143873876\\Desktop\\projeto-gamer-manha\\wwwroot\\img\\Equipes\\corinthians.jpg",
+      "SourceId": "projeto-gamer-manha",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\53143873876\\Desktop\\projeto-gamer-manha\\wwwroot\\",
+      "BasePath": "_content/projeto-gamer-manha",
+      "RelativePath": "img/Equipes/corinthians.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\Equipes\\corinthians.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\53143873876\\Desktop\\projeto-gamer-manha\\wwwroot\\img\\Equipes\\flamengo.jpg",
+      "SourceId": "projeto-gamer-manha",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\53143873876\\Desktop\\projeto-gamer-manha\\wwwroot\\",
+      "BasePath": "_content/projeto-gamer-manha",
+      "RelativePath": "img/Equipes/flamengo.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\Equipes\\flamengo.jpg"
+    },
+    {
       "Identity": "C:\\Users\\53143873876\\Desktop\\projeto-gamer-manha\\wwwroot\\img\\Equipes\\palmeiras.png",
       "SourceId": "projeto-gamer-manha",
       "SourceType": "Discovered",
@@ -117,6 +151,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\Equipes\\palmeiras.png"
+    },
+    {
+      "Identity": "C:\\Users\\53143873876\\Desktop\\projeto-gamer-manha\\wwwroot\\img\\Equipes\\senai.jpg",
+      "SourceId": "projeto-gamer-manha",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\53143873876\\Desktop\\projeto-gamer-manha\\wwwroot\\",
+      "BasePath": "_content/projeto-gamer-manha",
+      "RelativePath": "img/Equipes/senai.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\Equipes\\senai.jpg"
     },
     {
       "Identity": "C:\\Users\\53143873876\\Desktop\\projeto-gamer-manha\\wwwroot\\js\\site.js",
