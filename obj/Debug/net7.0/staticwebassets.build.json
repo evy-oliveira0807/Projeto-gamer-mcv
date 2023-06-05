@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "4qD+ubocukxvZskgOZGkEATuJ8zeGyT8awF+q4ytGAg=",
+  "Hash": "LxL9jClf3QD3pk9TertRm22VkvrHpYtaWnMSdnoihMQ=",
   "Source": "projeto-gamer-manha",
   "BasePath": "_content/projeto-gamer-manha",
   "Mode": "Default",
@@ -83,6 +83,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\53143873876\\Desktop\\projeto-gamer-manha\\wwwroot\\img\\Equipe\\corinthians.jpg",
+      "SourceId": "projeto-gamer-manha",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\53143873876\\Desktop\\projeto-gamer-manha\\wwwroot\\",
+      "BasePath": "_content/projeto-gamer-manha",
+      "RelativePath": "img/Equipe/corinthians.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\Equipe\\corinthians.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\53143873876\\Desktop\\projeto-gamer-manha\\wwwroot\\img\\Equipe\\realmadri.jpg",
+      "SourceId": "projeto-gamer-manha",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\53143873876\\Desktop\\projeto-gamer-manha\\wwwroot\\",
+      "BasePath": "_content/projeto-gamer-manha",
+      "RelativePath": "img/Equipe/realmadri.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\Equipe\\realmadri.jpg"
     },
     {
       "Identity": "C:\\Users\\53143873876\\Desktop\\projeto-gamer-manha\\wwwroot\\img\\Equipes\\agua santa.png",

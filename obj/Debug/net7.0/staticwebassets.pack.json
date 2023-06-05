@@ -13,6 +13,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\53143873876\\Desktop\\projeto-gamer-manha\\wwwroot\\img\\Equipe\\corinthians.jpg",
+      "PackagePath": "staticwebassets\\img\\Equipe\\corinthians.jpg"
+    },
+    {
+      "Id": "C:\\Users\\53143873876\\Desktop\\projeto-gamer-manha\\wwwroot\\img\\Equipe\\realmadri.jpg",
+      "PackagePath": "staticwebassets\\img\\Equipe\\realmadri.jpg"
+    },
+    {
       "Id": "C:\\Users\\53143873876\\Desktop\\projeto-gamer-manha\\wwwroot\\img\\Equipes\\agua santa.png",
       "PackagePath": "staticwebassets\\img\\Equipes\\agua santa.png"
     },

@@ -1,5 +1,7 @@
+@model Jogador
+
 @{
-    ViewBag["Title"] = "Equipe";
+    ViewBag["Title"] = "Jogador";
 
 }
 
@@ -7,10 +9,48 @@
 
 <form method="post" action="@Url.Action("Cadastrar")" enctype="multipart/form-data">
 
-<label for="Nome"></label>
+<label for="">Nome</label>
+<input type="text" name="Nome" required>
 
+<label for="">Email</label>
+<input type="text" name="Email" required>
 
+<label for="">Senha</label>
+<input type="text" name="Senha" required>
 
+<label for="">Imagem</label>
+<input type="file" name="Imagem">
+
+<button type="submit">Cadastrar </button>
 
 </form>
 
+<table class="table table-striped table-responsive">
+    <thead>
+        <th>Nome</th>
+        <th>Imagem</th>
+        <th>Ações</th>
+
+    </thead>
+
+    <tbody>
+        @foreach (Jogador jogador in ViewBag.Jogador)
+        {
+             <tr>
+                <td>@jogador.Nome</td>
+                
+                <td>
+                    <img src="/img/Jogador/@jogador.Imagem" alt="Imagem do jogador @jogador.Nome" width="50px">   
+                </td>
+                <td>
+                    <a asp-area="" asp-controller="Jogador" asp-action="Excluir" asp-route-id="@jogador.IdJogador" >Excluir</a>
+                </td>
+
+                <td>
+                    <a asp-area="" asp-controller="Jogador" asp-action="Editar" asp-route-id="@jogador.IdJogador">Editar</a>
+                </td>
+            </tr>           
+        }
+    </tbody>
+
+</table>
