@@ -16,6 +16,8 @@ namespace projeto_gamer_manha.Controllers
 
         //instância do contexto para acessar o banco de dados
         Context c = new Context();
+        private string? folder;
+        private object file;
 
         [Route("Listar")] //http://localhost/Equipe/Listar
         public IActionResult Index()
@@ -91,6 +93,17 @@ namespace projeto_gamer_manha.Controllers
 
 
             return LocalRedirect("~/Equipe/Listar");
+
+            if (!Directory.Exists(folder))
+            {
+                  Directory.CreateDirectory(folder);
+            }  
+            
+            
+
+
+
+
         }
 
 

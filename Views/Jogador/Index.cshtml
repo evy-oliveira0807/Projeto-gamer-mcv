@@ -1,56 +1,68 @@
 @model Jogador
 
 @{
-    ViewBag["Title"] = "Jogador";
-
+    ViewData["Title"] = "Jogador";
 }
 
 <h1>Tela de Jogadores</h1>
 
-<form method="post" action="@Url.Action("Cadastrar")" enctype="multipart/form-data">
+<form method="post" action="@Url.Action("Cadastrar")">
 
-<label for="">Nome</label>
-<input type="text" name="Nome" required>
+    <label for="">Nome</label>
+    <input type="text" name="Nome">
 
-<label for="">Email</label>
-<input type="text" name="Email" required>
+    <label for="">Email</label>
+    <input type="email" name="Email">
 
-<label for="">Senha</label>
-<input type="text" name="Senha" required>
+    <label for="">Senha</label>
+    <input type="Password" name="Senha">
 
-<label for="">Imagem</label>
-<input type="file" name="Imagem">
+    <label for="">Equipe</label>
+    <select type="IdEquipe" id="IdEquipe">
+        <option value="0">selecione uma opção:</option>
 
-<button type="submit">Cadastrar </button>
+        @foreach (Equipe equipe in ViewBag.Equipe)
+        {
+            <option value="@equipe.IdEquipe">@equipe.Nome</option>
+
+        }
+    </select>
+
+    <button type="Submit">Cadastrar</button>
+
+
+
+
+
 
 </form>
 
 <table class="table table-striped table-responsive">
     <thead>
+        <th>Id</th>
         <th>Nome</th>
-        <th>Imagem</th>
+        <th>Email</th>
+        <th>Equipe</th>
         <th>Ações</th>
-
     </thead>
 
     <tbody>
         @foreach (Jogador jogador in ViewBag.Jogador)
         {
-             <tr>
+            <tr>
+                <td>@jogador.IdJogador</td>
                 <td>@jogador.Nome</td>
-                
+                <td>@jogador.Email</td>
                 <td>
-                    <img src="/img/Jogador/@jogador.Imagem" alt="Imagem do jogador @jogador.Nome" width="50px">   
+                    <img src="/img/Equipes/@jogador.Equipe.Imagem" alt="Imagem da equipe @jogador.Equipe.Nome" width="50px">
                 </td>
                 <td>
-                    <a asp-area="" asp-controller="Jogador" asp-action="Excluir" asp-route-id="@jogador.IdJogador" >Excluir</a>
+                    <a asp-area="" asp-controller="Jogador" asp-action="Excluir" asp-route-id="@jogador.IdJogador">Excluir</a>
                 </td>
-
-                <td>
-                    <a asp-area="" asp-controller="Jogador" asp-action="Editar" asp-route-id="@jogador.IdJogador">Editar</a>
+                   <td>
+                    <a asp-area="" asp-controller="Jogador" asp-action="Atualizar" asp-route-id="@jogador.IdJogador">Atualizar</a>
                 </td>
-            </tr>           
+            </tr>
         }
     </tbody>
-
 </table>
