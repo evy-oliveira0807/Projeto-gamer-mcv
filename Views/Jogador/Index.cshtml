@@ -6,6 +6,17 @@
 
 <h1>Tela de Jogadores</h1>
 
+@if (ViewBag.UserName == null)
+{
+    <a class="navbar-brand" asp-area="" asp-controller="Login" asp-action="Index">
+        Login
+
+    </a>
+  <p>   Essa pagina não tem acesso </p>
+}
+else
+{
+    
 <form method="post" action="@Url.Action("Cadastrar")">
 
     <label for="">Nome</label>
@@ -18,7 +29,7 @@
     <input type="Password" name="Senha">
 
     <label for="">Equipe</label>
-    <select type="IdEquipe" id="IdEquipe">
+    <select name="IdEquipe" id="IdEquipe">
         <option value="0">selecione uma opção:</option>
 
         @foreach (Equipe equipe in ViewBag.Equipe)
@@ -29,8 +40,6 @@
     </select>
 
     <button type="Submit">Cadastrar</button>
-
-
 
 
 
@@ -60,9 +69,10 @@
                     <a asp-area="" asp-controller="Jogador" asp-action="Excluir" asp-route-id="@jogador.IdJogador">Excluir</a>
                 </td>
                    <td>
-                    <a asp-area="" asp-controller="Jogador" asp-action="Atualizar" asp-route-id="@jogador.IdJogador">Atualizar</a>
+                    <a asp-area="" asp-controller="Jogador" asp-action="Editar" asp-route-id="@jogador.IdJogador">Editar</a>
                 </td>
             </tr>
         }
     </tbody>
 </table>
+}

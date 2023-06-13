@@ -22,6 +22,8 @@ namespace projeto_gamer_manha.Controllers
         [Route("Listar")] //http://localhost/Equipe/Listar
         public IActionResult Index()
         {
+              ViewBag.UserName = HttpContext.Session.GetString("UserName");
+
             //variável que armazena as equipes listadas do banco de dados
             ViewBag.Equipe = c.Equipe.ToList();
 
@@ -115,7 +117,9 @@ namespace projeto_gamer_manha.Controllers
             Equipe equipe = c.Equipe.First(x => x.IdEquipe == id);
 
             ViewBag.Equipe = equipe;
-
+            
+            ViewBag.UserName = HttpContext.Session.GetString("UserName");
+            
             return View("Edit");
 
         }
