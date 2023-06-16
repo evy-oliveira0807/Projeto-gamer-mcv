@@ -3,19 +3,57 @@
 @{
     ViewData["Title"] = "Edit";
 }
+<link rel="stylesheet" href="~/css/equipes.css">
+
 <h1>Edição de Equipe</h1>
 
-<form method="post" action="@Url.Action("Atualizar")" enctype="multipart/form-data">
 
-    <input type="hidden" name="IdEquipe" value="@ViewBag.Equipe.IdEquipe">
+<main>
 
-    <label for="">Nome</label>
-    <input type="text" name="Nome" value="@ViewBag.Equipe.Nome">
+    <section class="container-grid cadastro-equipes">
 
-    <label for="">imagem</label>
-    <input type="File" name="Imagem" value="@ViewBag.Equipe.Imagem">
+        @if (ViewBag.UserName == null)
+        {
 
-    <button type="submit" >Atualizar</button>
-    
-   
-</form>
+
+            <a class="navbar-brand" asp-area="" asp-controller="Login" asp-action="Index">
+                Login
+
+            </a>
+            <p> Essa pagina não tem acesso </p>
+
+        }
+        else
+        {
+
+            @* Se estiver logado *@
+            <form class="frm-cad-equipe" method="post" action="@Url.Action("Atualizar")" enctype="multipart/form-data">
+                <div class="cadequipe-titulo">
+                    <h1>Edição de Equipes</h1>
+                    <hr>
+                </div>
+
+             
+
+                    <input type="hidden" name="IdEquipe" value="@ViewBag.Equipe.IdEquipe">
+
+
+                    <input class="campo-entrada" type="text" name="Nome" required
+                        placeholder="Digite o nome da sua equipe:">
+                    <label class="foto" for="foto-file">
+                        Nenhuma imagem selecionada...
+                        <input type="file" id="foto-file" name="Imagem">
+                    </label>
+
+
+
+                    <button>Atualizar</button>
+
+
+                </form>
+         
+
+        }
+    </section>
+
+</main>

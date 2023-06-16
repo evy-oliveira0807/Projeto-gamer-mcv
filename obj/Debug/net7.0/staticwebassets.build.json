@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "cohwsXi/z9qZ/rw1CQihyIkUKdqmeNxPRKIE3mgaGes=",
+  "Hash": "wS8Odelpva+8lWKeYfXTV6wY8L1GBg40wriyS5cTh70=",
   "Source": "projeto-gamer-manha",
   "BasePath": "_content/projeto-gamer-manha",
   "Mode": "Default",
@@ -1698,6 +1698,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\Equipes\\realmadri.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\53143873876\\Desktop\\projeto-gamer-manha\\wwwroot\\img\\Equipes\\sao paulo.jpg",
+      "SourceId": "projeto-gamer-manha",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\53143873876\\Desktop\\projeto-gamer-manha\\wwwroot\\",
+      "BasePath": "_content/projeto-gamer-manha",
+      "RelativePath": "img/Equipes/sao paulo.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\Equipes\\sao paulo.jpg"
     },
     {
       "Identity": "C:\\Users\\53143873876\\Desktop\\projeto-gamer-manha\\wwwroot\\img\\Equipes\\senai.jpg",
