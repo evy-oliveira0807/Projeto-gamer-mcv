@@ -31,7 +31,7 @@ namespace projeto_gamer_manha.Controllers
             string email = form["Email"].ToString();
             string senha = form["Senha"].ToString();
 
-            Jogador jogadorBuscado = c.Jogador.FirstOrDefault(j => j.Email == email && j.Senha == senha)!;
+            Jogador jogadorBuscado = c.Jogador.FirstOrDefault(j => j.Email == email && j.Senha == senha);
 
             //Aqui precisamos implementar a sessão
 

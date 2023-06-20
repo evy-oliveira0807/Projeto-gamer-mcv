@@ -11,38 +11,39 @@
     <section class="container-grid cadastro-equipes">
 
        @if (ViewBag.UserName == null)
-{
-<a class="navbar-brand" asp-area="" asp-controller="Login" asp-action="Index">
-Login
+        {
+            <a class="navbar-brand" asp-area="" asp-controller="Login" asp-action="Index">
+            Login
+            </a>
+            <p> Faça o login para acessar essa pagina! </p>
+        }
+        else
+        {
 
-</a>
-<p> Faça o login para acessar essa pagina! </p>
-}
-else
-{
-
-            <form action="" class="frm-cad-equipe" method="post" action="@Url.Action("Cadastrar")"
-                enctype="multipart/form-data">
+            <form class="frm-cad-equipe" method="post" action="@Url.Action("Cadastrar")" enctype="multipart/form-data">
                 <div class="cadequipe-titulo">
-
                     <h1>Cadastro de Jogadores</h1>
                     <hr>
                 </div>
+  
 
-                <input class="campo-entrada" type="number" id="id-equipe" placeholder="Digite o Id da sua equipe:"> 
+                <input class="campo-entrada"  name= "Nome" type="text" id="nome-jogador" placeholder="Digite o nome do Jogador:">
 
-                <input class="campo-entrada" type="text" id="nome-equipe" placeholder="Digite o nome da sua equipe:">
+                <input class="campo-entrada"  name= "Email" type="email" id="email-jogador" placeholder="Digite o Email do Jogador:">
 
-             
-            <select class="campo-entrada" id="equipe-select"> <option value="">Selecione uma Equipe</option> <option
-            value="x">Equipe X</option> <option value="y">Equipe Y</option> </select> 
+                <input class="campo-entrada"  name= "Senha" type="password" id="senha" placeholder="Digite a Senha:">
 
-                <input class="campo-entrada" type="text" id="nome-jogador" placeholder="Digite o nome do Jogador:">
+                <select class="campo-entrada" name= "IdEquipe" id="equipe-select">
+                    <option value=""> Escolha uma equipe</option>
+                    @foreach (var equipe in ViewBag.Equipe)
+                    {
+                        <option value="@equipe.IdEquipe" > 
+                            @equipe.Nome
+                        </option>
+                    }
 
-                <input class="campo-entrada" type="email" id="email-jogador" placeholder="Digite o Email do Jogador:">
-
-                <input class="campo-entrada" type="password" id="senha" placeholder="Digite a Senha:">
-
+                </select>
+            
                 <button>Cadastrar</button>
             </form>
 
@@ -67,19 +68,19 @@ else
                             <td>@jogador.IdJogador</td>
                             <td>@jogador.Nome</td>
                             <td>@jogador.Email</td>
-                            <td>
                                
                             <td>
                                 <a asp-area="" asp-controller="Jogador" asp-action="Excluir"
-                                    asp-route-id="@jogador.IdJogador">Excluir</a>
+                                    asp-route-id="@jogador.IdJogador"><img
+                                        class="yellow-trash" src="~/assets/trash.png" alt=""></a>
                             </td>
                             <td>
                                 <a asp-area="" asp-controller="Jogador" asp-action="Editar"
-                                    asp-route-id="@jogador.IdJogador">Editar</a>
+                                    asp-route-id="@jogador.IdJogador"><img class="yellow-trash" src="~/assets/edit-icon.png" alt=""></a>
                             </td>
                         </tr>
                     }
-                    <tr>
+                    @* <tr>
                         <td>1</td>
                         <td><img class="yellow-trash" src="./assets/trash.png" alt=""></td>
                     </tr>
@@ -90,7 +91,7 @@ else
                     <tr>
                         <td>1</td>
                         <td><img class="yellow-trash" src="./assets/trash.png" alt=""></td>
-                    </tr>
+                    </tr> *@
                 </tbody>
             </table>
      }  

@@ -22,7 +22,7 @@ namespace projeto_gamer_manha.Controllers
         [Route("Listar")] //http://localhost/Equipe/Listar
         public IActionResult Index()
         {
-              ViewBag.UserName = HttpContext.Session.GetString("UserName");
+            ViewBag.UserName = HttpContext.Session.GetString("UserName");
 
             //variável que armazena as equipes listadas do banco de dados
             ViewBag.Equipe = c.Equipe.ToList();
@@ -57,7 +57,7 @@ namespace projeto_gamer_manha.Controllers
                 }
 
                 //gera o caminho completo até o caminho do arquivo(imagem - nome com extensão)
-                var path = Path.Combine(folder, file.FileName);
+                var path = Path.Combine(Directory.GetCurrentDirectory(),"wwwroot/img/",folder, file.FileName);
 
                 //using para que a instrução dentro dele seja encerrado assim que for executada
                 using (var stream = new FileStream(path, FileMode.Create))
@@ -94,16 +94,7 @@ namespace projeto_gamer_manha.Controllers
             c.SaveChanges();
 
 
-            return LocalRedirect("~/Equipe/Listar");
-
-            if (!Directory.Exists(folder))
-            {
-                  Directory.CreateDirectory(folder);
-            }  
-            
-            
-
-
+            return LocalRedirect("~/Equipe/Listar");   
 
 
         }
@@ -145,7 +136,7 @@ namespace projeto_gamer_manha.Controllers
                     Directory.CreateDirectory(folder);
                 }
 
-                var path = Path.Combine(folder, file.FileName);
+                var path = Path.Combine(Directory.GetCurrentDirectory(),"wwwroot/img/Equipe",folder, file.FileName);
 
                 using (var stream = new FileStream(path, FileMode.Create))
                 {
